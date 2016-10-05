@@ -1,0 +1,78 @@
+
+#nav-text {
+    position: absolute;
+    display: inline;
+    right: 64px;
+}
+
+#exit {
+    position: absolute;
+    right: 10px;
+}
+
+#addBtn {
+    position: absolute;
+    margin-left: 12px;
+}
+
+footer{
+    position: absolute;
+    bottom: -900px;
+    height: 50px;
+    text-align: center;
+    width:100%;
+    display: block;
+}
+
+th, td, #cardTable {
+    border: solid 1px;
+    text-align: center;
+    font-size: 14px;
+}
+
+th {
+    height: 30px;
+}
+
+td {
+    height: 134px;
+}
+
+#cardTable {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+}
+
+.orderId {
+    width: 50px
+}
+
+.certificateId, .stuId, .createTime, .action {
+    width: 160px;
+}
+
+.cardImgBox {
+    width: 238px;
+}
+
+.img-thumbnail {
+    width: 220px;
+    height: 120px;
+}
+
+.preview_box img {
+    width: 200px;
+}
+#adminList{
+    position: relative;
+}
+#PageBox{
+    position: absolute;
+    left: 48%;
+}
+.error {
+    display: inline-block;
+    color: red;
+    font-size: 16px;
+}

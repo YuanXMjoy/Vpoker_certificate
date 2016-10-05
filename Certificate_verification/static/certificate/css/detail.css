@@ -1,0 +1,68 @@
+html {
+    font-size: 12px;
+}
+
+#imgBox {
+    padding: 0;
+    text-align: center;
+    margin-bottom: 66%;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+
+}
+
+#imgBoxSon {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: inline-block;
+}
+
+img {
+    width: 85.9%;
+    height:25%;
+    margin-top: 4.4%;
+    background-color: #eeeeee;
+}
+
+h3 {
+    font-size: 2.5rem;
+    top: 5.28%;
+    text-align: center;
+    color: #333333;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.8rem;
+}
+
+#reSearch {
+    margin-right: 16.3%;
+    margin-top: 6.1%;
+    border: solid 0.18rem;
+    border-color: rgb(44, 175, 239);
+    font-size: 1.2rem;
+    height: 9%;
+    width: 27%;
+    text-align: center;
+}
+
+#downloadBtn {
+    margin-left: 16.3%;
+    margin-top: 6.1%;
+    height: 9%;
+    width: 27%;
+
+    color: white;
+    background-color:rgb(44, 175, 239) ;
+    font-size: 1.2rem;
+    border: solid 0.18rem;
+    border-color: rgb(44, 175, 239);
+}
+

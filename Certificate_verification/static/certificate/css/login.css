@@ -1,0 +1,87 @@
+body {
+}
+.form-control{
+    margin-top: 12px;
+}  label{
+       margin-top: 12px;
+   }
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#account,#password{
+    width: 300px;
+    height: 36px;
+}
+
+#formBox {
+    margin-top: 60px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+}
+
+form {
+    margin-left: 100px;
+}
+
+#code {
+    width: 200px;
+}
+
+.form-inline {
+    margin-right: 60px;
+}
+
+#codeImg {
+    width: 85px;
+    height: 36px;
+    margin-left: 10px;
+    border: none;
+    background-color: #b5b5b5;
+    color: #fcfcfc;
+    display: inline;
+    margin-top: 12px;
+}
+
+#login {
+    margin-top: 18px;
+    width: 300px;
+    margin-left: 105px;
+    height: 36px;
+    color: white;
+    background-color: rgb(44, 175, 239);
+    border: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.error {
+    display: inline-block;
+    color: red;
+    font-size: 16px;
+}
+
+#code-error{
+    position: absolute;
+    margin-left: 105px;
+    margin-top: 18px;
+}
+#account-error{
+    position: absolute;
+    margin-top: 18px;
+    margin-left: 6px;
+}
+#password-error{
+    position: absolute;
+    margin-top: 18px;
+    margin-left: 6px;
+}

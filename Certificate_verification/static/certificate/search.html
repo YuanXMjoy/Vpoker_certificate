@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width height=device-height initial-scale=1 user-scalable=no">
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/search.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/search.css" rel="stylesheet">
+    <title>VPOVER证书查询</title>
+</head>
+
+<h3>VPOKER证书查询</h3>
+
+<div id="cardBox">
+    <form id="searchForm">
+        <div  class="sonBox" id="cardBoxSon">
+            <label id="numLabel" for="cardNum">证书编号*</label>
+            <input id="cardNum" class="form-control" placeholder="请输入证书编号" required maxlength="15">
+        </div><br>
+        <div  class="sonBox" id="codeBoxSon">
+            <label for="code">验证码*&emsp;&nbsp;</label>
+            <input id="code" class="form-control" placeholder="请输入验证码" required maxlength="6" minlength="6">
+            <img id="codePicture">
+        </div><br>
+        <div class="sonBox" id="btnBox">
+            <input id="findBtn" class="form-control" type="submit" value="查询">
+        </div>
+    </form>
+
+</div>
+
+<footer>
+    <p>Copyright 2014-2016©<a href="http://froginfo.cn">www.froginfo.cn</a> All Rights Reserved</p>
+
+    <p>弗洛格(武汉)信息科技有限公司 鄂ICP备14011846号</p>
+</footer>
+</body>
+</html>

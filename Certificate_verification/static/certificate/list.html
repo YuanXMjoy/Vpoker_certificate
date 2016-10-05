@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/list.css" rel="stylesheet">
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src ="js/jquery.validate.min.js"></script>
+    <script src="js/list.js"></script>
+    <title>证书列表页</title>
+</head>
+<body>
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">VPOKER证书管理</a>
+    </div>
+    <div>
+        <div id="userBox">
+            <div id="nav-text">
+                <p class="navbar-text">您好，<span id="username"></span></p>
+            </div>
+            <button type="button" id="exit" class="btn btn-default navbar-btn">
+                退出
+            </button>
+        </div>
+    </div>
+</nav>
+<button id="addBtn" class="btn btn-default" data-toggle="modal"
+        data-target="#addBox">添加证书
+</button>
+<div id="adminList">
+</div>
+<div id="PageBox">
+    <div id="orderBox"></div>
+    <div id="pagesGroup"></div>
+    <p class="pageP"></p>
+</div>
+<footer>
+    <p>Copyright 2014-2016 © <a href="http://froginfo.cn">www.froginfo.cn</a> All Rights Reserved</p>
+
+    <p>弗洛格(武汉)信息科技有限公司 鄂ICP备14011846号</p>
+</footer>
+<!--添加模态框（Modal） -->
+<div class="modal fade" id="addBox" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close"
+                        data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    添加证书
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form" id="addForm">
+                    <div class="form-group">
+                        <label for="cardNumber" class="col-sm-2 control-label">证书编号</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="cardNumber" name="cardNumber"
+                                   placeholder="请输入证书编号">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="stuNum" class="col-sm-2 control-label">VPOKER学号</label>
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="stuNum" name="stuNum"
+                                   placeholder="请输入学号">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="img_input">证书图片</label>
+                        <input type="file" id="img_input" name="img_input" accept="image/*">
+                    </div>
+                    <div class="preview_box" id="preview"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default"
+                                data-dismiss="modal">关闭
+                        </button>
+                        <button type="submit" class="btn btn-primary" id="cardAdd">
+                            提交
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+</div>
+<!-- 编辑模态框（Modal） -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close"
+                        data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="editLabel">
+                    编辑证书
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form" id="editForm">
+                    <div class="form-group">
+                        <label for="cardNumber" class="col-sm-2 control-label">证书编号</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="editCardNumber" name="editCardNumber"
+                                   placeholder="请输入证书编号">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="editStuNum" class="col-sm-2 control-label">VPOKER学号</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="editStuNum" name="editStuNum"
+                                   placeholder="请输入学号">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputfilePic">证书图片</label>
+                        <input type="file" id="inputfilePic" name="inputfilePic" accept="image/*">
+                    </div>
+                    <div class="preview_box" id="re_preview"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default"
+                                data-dismiss="modal">关闭
+                        </button>
+                        <button type="submit" class="btn btn-primary" id="editBtn">
+                            提交
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+</div>
+<!--删除确认框-->
+<div class="modal fade" id="delModal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close"
+                        data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myLabel">
+                    确认删除
+                </h4>
+            </div>
+            <div class="modal-body">
+                确认删除吗？该操作不能撤回
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">取消
+                </button>
+                <button type="button" class="btn btn-primary" id="delConfirm"
+                        style="background-color: #bcbcbc;border-color: #cecece">
+                    确认
+                </button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+</div>
+
+
+</body>
+</html>
